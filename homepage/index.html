@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPSC 332 Term Project - University Database</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #333; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .section { margin-bottom: 30px; padding: 15px; border: 1px solid #ddd; border-radius: 4px; }
+        .section h2 { margin-top: 0; color: #555; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="number"] { width: calc(100% - 22px); padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        input[type="submit"] { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #0056b3; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CPSC 332 Term Project - University Database</h1>
+
+        <div class="section">
+            <h2>Professor Functions</h2>
+            
+            <form action="professor_schedule.php" method="GET">
+                <label for="prof_ssn">Get Professor's Class Schedule:</label>
+                <input type="text" id="prof_ssn" name="prof_ssn" placeholder="Enter Professor's SSN" required>
+                <input type="submit" value="View Schedule">
+            </form>
+            <br>
+            <form action="grade_distribution.php" method="GET">
+                <label for="course_num_grade">Get Grade Distribution for a Section:</label>
+                <input type="text" id="course_num_grade" name="course_num" placeholder="Enter Course Number" required>
+                <input type="text" id="section_num_grade" name="section_num" placeholder="Enter Section Number" required>
+                <input type="submit" value="View Grade Distribution">
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Student Functions</h2>
+
+            <form action="course_sections.php" method="GET">
+                <label for="course_num_sections">List Sections for a Course:</label>
+                <input type="text" id="course_num_sections" name="course_num" placeholder="Enter Course Number" required>
+                <input type="submit" value="List Sections">
+            </form>
+            <br>
+            <form action="student_transcript.php" method="GET">
+                <label for="student_id">Get Student's Courses and Grades:</label>
+                <input type="text" id="student_id" name="student_id" placeholder="Enter Student Campus Wide ID" required>
+                <input type="submit" value="View Transcript">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
